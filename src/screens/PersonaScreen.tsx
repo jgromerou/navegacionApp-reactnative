@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { styles } from '../themes/appTheme';
 
 export const PersonaScreen = ({ route, navigation }) => {
+  // console.log(route);
   useEffect(() => {
     navigation.setOptions({
       title: route.params.nombre,
