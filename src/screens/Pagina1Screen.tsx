@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const Pagina1Screen = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.globalMargin}>
       <Text style={styles.title}>Pagina1Screen</Text>
 
       <Button
@@ -12,7 +12,14 @@ export const Pagina1Screen = ({ navigation }) => {
         onPress={() => navigation.navigate('Pagina2Screen')}
       />
 
-      <Text>Navegar con argumentos</Text>
+      <Text
+        style={{
+          marginVertical: 20,
+          fontSize: 20,
+        }}
+      >
+        Navegar con argumentos
+      </Text>
 
       <View style={{ flexDirection: 'row' }}>
         <TouchableOpacity
