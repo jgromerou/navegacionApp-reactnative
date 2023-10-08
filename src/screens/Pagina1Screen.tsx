@@ -1,6 +1,7 @@
 import { Button, Text, View } from 'react-native';
 import { styles } from '../themes/appTheme';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export const Pagina1Screen = ({ navigation }) => {
   return (
@@ -31,6 +32,7 @@ export const Pagina1Screen = ({ navigation }) => {
             })
           }
         >
+          <Icon name='body-outline' size={30} color='white' />
           <Text style={styles.botonGrandeTexto}>Pedro</Text>
         </TouchableOpacity>
 
@@ -43,6 +45,7 @@ export const Pagina1Screen = ({ navigation }) => {
             })
           }
         >
+          <Icon name='woman-outline' size={30} color='white' />
           <Text style={styles.botonGrandeTexto}>Maria</Text>
         </TouchableOpacity>
       </View>
