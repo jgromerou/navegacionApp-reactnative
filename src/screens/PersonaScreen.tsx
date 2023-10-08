@@ -1,14 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Text, View } from 'react-native';
 import { styles } from '../themes/appTheme';
+import { AuthContext } from '../context/AuthContext';
 
 export const PersonaScreen = ({ route, navigation }) => {
   // console.log(route);
+  const params = route.params;
+
+  const{changeUsername}=useContext(AuthContext)
+
   useEffect(() => {
     navigation.setOptions({
-      title: route.params.nombre,
+      title: params.nombre,
     });
   }, []);
+
+  useEffect(() => {
+    changeUsername(params.nombre)
+  }, [])
+  
 
   return (
     <View style={styles.globalMargin}>
